@@ -21,6 +21,7 @@
 
     <modules>
         <module>learn-bean</module>
+        <module>learn-ioc</module>
     </modules>
 
     <dependencies>
