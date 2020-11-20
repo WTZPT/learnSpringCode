@@ -29,10 +29,10 @@ public class Learn2ch3 {
 
     // 2. 通过 @Component 方式
     @Component// 定义当前类作为 Spring Bean（组件）
-    public class Config{
+    public class Config {
         // 1. 通过 @Bean 方式定义
         @Bean
-        public User user(){
+        public User user() {
             User user = new User();
             user.setAge(18);
             user.setName("Jany");

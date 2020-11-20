@@ -17,15 +17,15 @@ public class Learn2ch2 {
         genericBeanDefinition.setBeanClass(User.class);
         // 通过 MutablePropertyValues 批量操作属性
         MutablePropertyValues propertyValues = new MutablePropertyValues();
-        propertyValues.add("id",123)
-                .add("name","Jany")
-                .add("age",18);
+        propertyValues.add("id", 123)
+                .add("name", "Jany")
+                .add("age", 18);
         genericBeanDefinition.setPropertyValues(propertyValues);
 
         // 创建 BeanFactory 容器
         GenericApplicationContext applicationContext = new GenericApplicationContext();
         // 注册上面创建的genericBeanDefinition
-        applicationContext.registerBeanDefinition("testBean",genericBeanDefinition);
+        applicationContext.registerBeanDefinition("testBean", genericBeanDefinition);
         // 启动 Spring 应用上下文
         applicationContext.refresh();
         // 根据bean name 查找Bean
