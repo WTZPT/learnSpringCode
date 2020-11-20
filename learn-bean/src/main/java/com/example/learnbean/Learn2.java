@@ -14,15 +14,15 @@ public class Learn2 {
         //通过BeanDefinitionBuilder创建BeanDefinition
         BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition("com.example.learnbean.entity.User");
         beanDefinitionBuilder
-                .addPropertyValue("name","Jane")
-                .addPropertyValue("age",18)
-                .addPropertyValue("id",31321);
+                .addPropertyValue("name", "Jane")
+                .addPropertyValue("age", 18)
+                .addPropertyValue("id", 31321);
         BeanDefinition beanDefinition = beanDefinitionBuilder.getBeanDefinition();
 
         // 创建 BeanFactory 容器
         GenericApplicationContext applicationContext = new GenericApplicationContext();
         // 根据beanDefinition注册成spring bean
-        applicationContext.registerBeanDefinition("testBean",beanDefinition);
+        applicationContext.registerBeanDefinition("testBean", beanDefinition);
         // 启动 Spring 应用上下文
         applicationContext.refresh();
         // 根据bean name 查找Bean
